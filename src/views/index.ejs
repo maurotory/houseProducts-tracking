@@ -1,0 +1,33 @@
+
+<%- include('partials/header') %>
+
+<% if (products.length) { %>
+    <div class="col-md-4 offset-md-4">
+        <% products.forEach(function (product) { %>
+            <div class="card my-2">
+                <div class="card-header bg-primary text-white">
+                    <p><%= product.published %></p>
+                </div>
+            <div class="card-body">
+                <h1><%= product.name%></h1>
+                <h3>Product: <%= product.title%></h3>
+                <h3>Nº: <%= product.number%></h3>
+                <h3>Total Price: <%= product.price%></h3>
+            
+
+
+            </div>
+            <div class="card-footer">
+                <a href="/delete/<%= product.id %>" class="btn btn-danger">Delete</a>
+
+            </div>
+    
+            </div>
+        <% })%>
+    
+    </div>
+<% } else {%>
+    <p>No entries! <a href="/new-entry">Add One!</a></p>
+<% }%>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,40 @@
+
+<%- include('partials/header') %>
+
+<div class="col-md-6 offset-md-3">
+    <h2 class="text-center">Write a Entry</h2>
+
+    <form method="post" action="/new-entry">
+        <div class="form-group">
+            <label for="product">Title</label>
+            <input type="text" name="title" id="title" class="form-control" placeholder="Product bought" required>
+        </div>
+        <div class="form-group">
+            <label for="Price">Price</label>
+            <input type="text" name="price" id="price" class="form-control" placeholder="price">
+
+        </div>
+        <div class="form-group">
+            <label for="number">nº Products</label>
+            <input type="number" name="number" id="number" class="form-control" placeholder="nº Products">
+
+        </div>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Person's name">
+
+        </div>
+        <div class="form-group">
+            <label for="body">Entry Text (Optional)</label>
+            <textarea name="body" id="body" rows="3" class="form-control" required>(Optional)</textarea>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Post Entry" class="btn btn-primary">
+        </div>
+    </form>
+
+</div>
+
+
+<%- include('partials/footer') %>
